@@ -1,6 +1,8 @@
 class CusswordsController < ApplicationController
 
   def index
-    @cusses = Cussword.all
+    cuss = Cussword.where("rating = ?", params[:severity])
+    @cusses = cuss
+    
   end
 end

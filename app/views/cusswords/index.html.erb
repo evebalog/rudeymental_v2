@@ -1,5 +1,8 @@
 How rudey are you feeling today?
-
+<%= form_tag cusswords_path, method: :get do %>
+      <button class="button" type=submit name=severity value='1'>PG 13</button>
+    <%end%>
+      
 <div id="rude">
 <%@cusses.each do |f|%>
 <%=f.word.split.map(&:capitalize).join(' ')%>

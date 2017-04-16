@@ -13,11 +13,17 @@ feature "Cusswords page" do
         Cussword.create(word: "Duckmaster", rating: 1)
         Cussword.create(word: "Shitmaster", rating: 2)
       end
-
-      scenario "user can see cusswords" do
+      # test below was only used before introducing filters
+      # scenario "user can see cusswords" do
+      #   visit "/cusswords"
+      #   expect(page).to have_content "Duckmaster"
+      #   expect(page).to have_content "Shitmaster"
+      # end
+      scenario "user can click on 'PG13' button that returns cusswords with 1 rating" do
         visit "/cusswords"
+        click_button "PG 13"
         expect(page).to have_content "Duckmaster"
-        expect(page).to have_content "Shitmaster"
+        expect(page).to have_no_content "Shitmaster"
       end
     end
   end
