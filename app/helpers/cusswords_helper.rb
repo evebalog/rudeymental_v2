@@ -1,0 +1,2 @@
+module CusswordsHelper
+end
