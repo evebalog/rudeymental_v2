@@ -19,11 +19,18 @@ feature "Cusswords page" do
       #   expect(page).to have_content "Duckmaster"
       #   expect(page).to have_content "Shitmaster"
       # end
-      scenario "user can click on 'PG13' button that returns cusswords with 1 rating" do
+      scenario "user can click on 'PG 13' button and see cusswords with 1 rating only" do
         visit "/cusswords"
         click_button "PG 13"
         expect(page).to have_content "Duckmaster"
         expect(page).to have_no_content "Shitmaster"
+      end
+
+      scenario "user can click on 'Mildly Irritated' button and see cusswords with 2 rating only" do
+        visit "/cusswords"
+        click_button "Mildly Irritated"
+        expect(page).to have_content "Shitmaster"
+        expect(page).to have_no_content "Duckmaster"
       end
     end
   end
