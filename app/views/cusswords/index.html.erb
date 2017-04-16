@@ -1,1 +1,7 @@
 How rudey are you feeling today?
+
+<div id="rude">
+<%@cusses.each do |f|%>
+<%=f.word.split.map(&:capitalize).join(' ')%>
+<%end%>!
+</div>
