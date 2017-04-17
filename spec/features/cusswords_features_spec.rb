@@ -38,17 +38,5 @@ feature "Cusswords page" do
     end
   end
 
-  context "displaying translations" do
-    let(:cussword_a) { double('cussword', id: 1)}
-    let(:cussword_a) { double('cussword', id: 2)}
-    before {
-      Translation.create(hun_word: "ló", cussword_id: 1)
-      Translation.create(hun_word: "fej", cussword_id: 2)
-    }
-    scenario "user can see translations of the generated cusswords from the database" do
-      visit "/cusswords"
-      click_button "PG 13"
-      expect(page).to have_content "ló fej"
-    end
-  end
+  
 end

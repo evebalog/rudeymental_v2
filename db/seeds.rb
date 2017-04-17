@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-# Cussword.destroy_all
-# Translation.destroy_all
+Cussword.destroy_all
+Translation.destroy_all
 cusswords_hash = []
 strings = %w(aclit
  adick
@@ -231,13 +231,13 @@ end
 words = Cussword.create(cusswords_hash)
 p "Created #{Cussword.count} words"
 
-# word_a = Cussword.find_by id: 94
-# word_a.create_translation!(hun_word: "fasz", french_word: "putain")
-# word_b = Cussword.find_by id: 176
-# word_b.create_translation!(hun_word: "szar", french_word: "merde")
-# word_c = Cussword.find_by id: 203
-# word_c.create_translation!(hun_word: "csöcs", french_word: "téton")
-# word_d = Cussword.find_by id: 10
-# word_d.create_translation!(hun_word: "segg", french_word: "cul")
-# word_e = Cussword.find_by id: 107
-# word_e.create_translation!(hun_word: "faszfej", french_word:"connard")
+word_a = Cussword.find_by id: 93
+word_a.create_translation!(hun_word: "fasz", french_word: "putain")
+word_b = Cussword.find_by id: 176
+word_b.create_translation!(hun_word: "szar", french_word: "merde")
+word_c = Cussword.find_by id: 203
+word_c.create_translation!(hun_word: "csöcs", french_word: "téton")
+word_d = Cussword.find_by id: 10
+word_d.create_translation!(hun_word: "segg", french_word: "cul")
+word_e = Cussword.find_by id: 107
+word_e.create_translation!(hun_word: "faszfej", french_word:"connard")

@@ -10,3 +10,13 @@ How rudey are you feeling today?
 <%=f.word.split.map(&:capitalize).join(' ')%>
 <%end%>!
 </div>
+
+<div>Hungarian translation:
+    <div id="rude">
+      <% unless @hun_words.any?{|word| word.nil?}%>
+        <%@hun_words.each do |word|%>
+          <%=word%>
+        <%end%>!
+    </div>
+    <%end%>
+  </div>
