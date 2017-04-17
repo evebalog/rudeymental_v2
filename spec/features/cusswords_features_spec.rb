@@ -1,4 +1,4 @@
-require 'rails_helper'
+# require 'rails_helper' - required it in .rspec file instead
 
 feature "Cusswords page" do
   context "when visiting the website" do
@@ -9,11 +9,11 @@ feature "Cusswords page" do
 
     context "displaying cusswords with rating filters" do
 
-      before do
+      before {
         Cussword.create(word: "Duckmaster", rating: 1)
         Cussword.create(word: "Shitmaster", rating: 2)
         Cussword.create(word: "Fwordmaster", rating: 3)
-      end
+      }
       # test below was only used before introducing filters
       # scenario "user can see cusswords" do
       #   visit "/cusswords"
